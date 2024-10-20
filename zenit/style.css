@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E4E2E0;
+    color: #525B64;
+}
+
+h1, h2, h3 {
+    font-family: 'Patua One';
+    color: #4A4A4A;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    background: #E4E2E0;
+    color: white;
+    padding: 100px 0;
+    background-image: url(images/head01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.hero-section {
+    display: flex; /* Flexbox pre rozdelenie na dve polovice */
+    justify-content: space-between; /* Rozdelenie priestoru medzi ľavou a pravou časťou */
+    align-items: center; /* Vertikálne zarovnanie */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding: 0 50px; /* Medzera na okrajoch */
+}
+
+.header-left {
+    width: 50%; /* Ľavá polovica */
+    color: white;
+    padding-left: 100px; /* Vytvoríme malý odsadený priestor na ľavej strane */
+}
+
+.header-left h1 {
+    font-size: 50px; /* Veľkosť nadpisu */
+    margin-bottom: 10px;
+    text-align: left; 
+    font-family: 'Patua One';
+    color: white;
+}
+
+.header-left p {
+    font-size: 20px; /* Veľkosť popisu pod nadpisom */
+    text-align: left; /* Zarovnanie textu naľavo */
+    margin-top: 0; /* Malá medzera medzi nadpisom a textom */
+}
+
+.header-right {
+    width: 50%; /* Pravá polovica */
+    display: flex;
+    justify-content: flex-end; /* Zarovnáva formulár na pravú stranu */
+    padding-right: 30px; /* Odstup napravo */
+}
+
+.subscribe-form {
+    padding: 20px;
+    text-align: right;
+}
+
+.subscribe-form h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.subscribe-form input {
+    width: 100%; /* Vstupné polia budú široké na celú šírku */
+    margin: 5px 0; /* Medzera medzi jednotlivými prvkami formulára */
+    padding: 10px;
+    border: solid 2px white;
+    font-size: 16px;
+}
+
+.subscribe-form input[type="submit"] {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Zmenšená veľkosť textu */
+    padding: 8px 15px; /* Zmenšíme vnútorné odsadenie tlačidla */
+    width: auto; /* Šírku tlačidla prispôsobíme obsahu */
+}
+
+.subscribe-form input[type="submit"]:hover {
+    background-color: #617391;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #E4E2E0;
+    text-align: center;
+}
+
+.feature {
+    width: 30%;
+}
+
+.feature h1{
+    color: #FFFFFF;
+    font-size: 70px;
+    font-family: 'Patua One';
+}
+
+.feature h2{
+    color: #525B64;
+    font-family: 'Roboto';
+}
+
+.feature p {
+    font-family: 'Roboto';
+    font-style: italic;
+}
+
+
+.special-offers {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.offer1, .offer2, .offer3 {
+    width: 33.33%;
+    height: 325px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: white;
+    overflow: hidden;
+    transition: filter 0.3s ease, background-color 0.3s ease; /* Pridaný prechod */
+}
+
+.offer1:hover, .offer2:hover, .offer3:hover {
+    filter: grayscale(0%); /* Odstránenie grayscale efektu pri hover */
+    background-color: #617391; /* Pridanie background-color pri hover */
+}
+
+/* Nastavenie obrázkov pre jednotlivé ponuky */
+.offer1 {
+    background-image: url("images/res02.jpg");
+    filter: grayscale(100%);
+}
+
+.offer2 {
+    background-image: url("images/res03.jpg");
+    filter: grayscale(100%);
+}
+
+.offer3 {
+    background-image: url("images/res01.jpg");
+    filter: grayscale(100%);
+}
+
+/* Nadpis v jednotlivých ponukách */
+.offer1 h3, .offer2 h3, .offer3 h3 {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Patua One";
+}
+
+/* Pridanie hover efektu aj na tlačidlo, keď hoveruješ nad obrázkom */
+.offer1:hover button, .offer2:hover button, .offer3:hover button {
+    background-color: #617391; /* Nastavenie pozadia tlačidla pri hover */
+    color: white;
+}
+
+.offer1 button, .offer2 button, .offer3 button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease; /* Pridaný prechod pre zmenu farby */
+}
+
+.offer1 button:hover, .offer2 button:hover, .offer3 button:hover {
+    background-color: #617391; /* Zmena farby tlačidla pri priamom hover */
+}
+
+.nizsie {
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #E4E2E0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.locations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px; /* Pridanie medzery medzi obrázkami */
+    overflow: hidden; /* Skryje všetky obrázky, ktoré presahujú viditeľnú oblasť */
+}
+
+.location {
+    position: relative;
+    flex: 1; /* Každý obrázok bude mať rovnakú šírku */
+    display: none; /* Všetky lokality sú skryté */
+}
+
+.location img {
+    width: 100%; /* Obrázky budú mať rovnakú šírku */
+    height: 200px; /* Nastavená pevná výška pre konzistentnú veľkosť */
+    object-fit: cover; /* Obrázok sa prispôsobí bez deformácie */
+    filter: grayscale(100%); /* Čiernobiely filter na obrázok */
+}
+
+.location h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Horizontálne aj vertikálne vycentrovanie textu */
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Pridanie tieňa pre lepšiu viditeľnosť textu */
+}
+
+/* Efekt pri hover */
+.location:hover img {
+    filter: none; /* Odstránenie čiernobieleho filtra pri hover */
+}
+
+.location:hover h3 {
+    color: black; /* Zmena farby textu na čiernu */
+    text-shadow: 2px 2px 5px white; /* Pridanie bieleho okraja okolo textu */
+}
+
+/* Štýl pre viditeľné lokácie */
+.visible {
+    display: block; /* Zobrazí lokalitu */
+}
+
+
+.apres-ski {
+    text-align: center;
+    padding: 50px;
+    font-style: italic;
+}
+
+.apres-ski h2 {
+    text-align: center;
+    padding: 50px;
+    color: #525B64;
+}
+
+.advantages {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+.advantage {
+    width: 30%; 
+    margin: 10px;
+    text-align: center; 
+}
+
+.advantage img {
+    width: 80px; 
+    height: auto; 
+}
+.footer-info {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.footer-image {
+    width: 33.33%; 
+    height: auto; 
+}
+
+.contact-info {
+    width: 33.33%; 
+    text-align: center; 
+}
+
+.contact-info h2 {
+    margin-bottom: 10px; 
+}
+
+.contact-info p {
+    margin: 5px 0; 
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.vsetko {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
